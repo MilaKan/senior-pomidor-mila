@@ -1,0 +1,21 @@
+Создаёт список из 7 баг-репортов.
+
+def create_bug_reports():
+
+    bug_reports = [
+        {"description": "Ошибка 1", "severity": "High"},
+        {"description": "Ошибка 2", "severity": "Medium"},
+        {"description": "Ошибка 3", "severity": "Low"},
+        {"description": "Ошибка 4", "severity": "High"},
+        {"description": "Ошибка 5", "severity": "Medium"},
+        {"description": "Ошибка 6", "severity": "Low"},
+        {"description": "Ошибка 7", "severity": "High"},
+    ]
+    return bug_reports
+-------------------
+Считает общее колчиество ТК на неделю и среднее колчиество в день
+
+def calculate_weekly_stats(test_cases):
+    total_cases = sum(test_cases)
+    average_cases = total_cases / len(test_cases)
+    return total_cases, average_cases
