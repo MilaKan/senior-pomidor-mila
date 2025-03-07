@@ -5,7 +5,7 @@ def collect_bug_reports():
         if description.lower() == 'exit':
             break
         severity_levels = ['blocker', 'critical', 'high', 'medium', 'low']
-        severity = input("Введите уровень критичности (severity_levels = (blocker/critical/high/medium/low): ").lower()
+        severity = input("Введите уровень критичности (blocker/critical/high/medium/low): ").lower()
         while severity not in severity_levels:
             print("Некорректный уровень критичности. Попробуйте снова.")
             severity = input("Введите уровень критичности (blocker/critical/high/medium/low): ").lower()

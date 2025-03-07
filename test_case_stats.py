@@ -31,7 +31,7 @@ def main():
 
     print(f"\nОбщее количество тест-кейсов за неделю: {total_cases}")
     print(f"Среднее количество тест-кейсов в день: {average_cases:.2f}")
-    if average_cases < 10:
+    if average_cases > 10:
         print("Отличная работа!")
     else:
         print("Попробуйте улучшить результат.")
