@@ -1,3 +1,5 @@
-number1 = 14
-result = number1 > 0 and 14 % 2 == 0
-print(result)
+number1 = 15
+if number1 > 0 and number1 % 2 == 0:
+    print("Число явялется положительным и чётным")
+else:
+    print ("Число не подходит под условия")

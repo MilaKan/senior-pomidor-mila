@@ -1,5 +1,5 @@
-num = 150
-result = num >= 0 and num <= 100
-
-if result == False:
+num = -95
+if num >= 0 and num <= 100 :
+    print("Число находиться в пределах диапазона")
+else:
     print ("Число находиться за пределами диапазона")

@@ -46,33 +46,3 @@ user_input = input("Введите текст: ")
 result = count_vowels(user_input)
 print(result)
 '''
-
-def create_account(name):
-    initial_deposit=100
-    print(f"Создан счёт для {name} с балансов {initial_deposit}")
-
-#create_account("bob")
-
-transactions = [100,50,-150,500]
-
-def apply_transaction(transactions):
-    balance =0
-    for transaction in transactions:
-        if transaction > 0:
-            print(f"Пополнение на сумму: {transaction}")
-        else:
-            print(f"Снятие на сумму: {transaction}")
-        balance += transaction
-        print(f"Итоговая сумма: {balance}")
-apply_transaction(transactions)
-
-def reach_min_balance(initial_balance , min_balance):
-    while initial_balance < min_balance:
-        print(f"Текущий баланc {initial_balance} меньше минимальной суммы: {min_balance}. Добавляем депозит 100")
-        initial_balance += 100
-        print(f"{initial_balance} Достинут минимальный баланс: {min_balance}")
-#reach_min_balance(50,800)
-
-
-
-
