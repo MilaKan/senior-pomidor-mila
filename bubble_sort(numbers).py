@@ -6,6 +6,6 @@ def bubble_sort(numbers):
                 numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
     return numbers
 numbers = [5, 2, 9, 1, 5, 6]
-print(f"Исходный список: ")
+print(f"Исходный список: {numbers}")
 sorted_numbers = bubble_sort(numbers)
 print("Отсортированный список:", sorted_numbers)
