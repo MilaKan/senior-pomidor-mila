@@ -1,3 +1,6 @@
+from operator import length_hint
+
+
 def greet(name):
     print(f"Привет {name}!")
 
@@ -291,6 +294,316 @@ class Car:
 # print(f"Бренд: {car1.brand}, Модель: {car1.model}")
 # print(f"Всего автомобилей: {Car.car_count}")
 
-my_dict = {"a": 1, "b": 2, "c": 3}
-for key , value in my_dict.items():
-    print(key , value)
+# my_dict = {"a": 1, "b": 2, "c": 3}
+# for key , value in my_dict.items():
+#     print(key , value)
+
+    # Напишите
+    # программу, которая выводит числа от
+    # 1 до  n(включительно), но:
+    #
+    # Если
+    # число
+    # делится
+    # на
+    # 3, вместо
+    # числа
+    # выведите
+    # "Fizz".
+    # Если
+    # число
+    # делится
+    # на
+    # 5, вместо
+    # числа
+    # выведите
+    # "Buzz".
+    # Если
+    # число
+    # делится
+    # и
+    # на
+    # 3, и
+    # на
+    # 5, выведите
+    # "FizzBuzz".
+    # В
+    # остальных
+    # случаях
+    # выведите
+    # само
+    # число.
+    #
+    # Пример
+    # входных
+    # данных:
+    # n = 15
+    #
+    # Пример
+    # выходных
+    # данных:
+    # 1
+    # 2
+    # Fizz
+    # 4
+    # Buzz
+    # Fizz
+    # 7
+    # 8
+    # Fizz
+    # Buzz
+    # 11
+    # Fizz
+    # 13
+    # 14
+    # FizzBuzz
+
+# def calculate(n):
+#     for i in range(1,n+1):
+#         if i % 3 == 0 and i % 5 == 0:
+#             print("Fizzbuzz")
+#         elif i % 3 ==0:
+#             print("Fizz")
+#         elif i % 5 == 0:
+#             print("Buzz")
+#         else:
+#             print(i)
+#
+# calculate(15)
+
+def text(str):
+    string = str.split(",") # hello world!
+    print(string)
+    joined_str = "-".join(string)
+    print(joined_str)
+# text("Hello, World!")
+
+def text1 (str1):
+    new_str = str1.replace("Hello", "Happy")
+    print(new_str)
+
+# text1("Hello, World!")
+
+# text = "   "
+# index = text.isspace()
+# print(index)  # Вывод: 8
+
+
+# text = "Привет, мир!"
+# result = text[::-1]
+# print(result)  # Вывод: "Привет"
+
+# text = "He said, \"Hello!\""
+# print(text)  # He said, "Hello!"
+
+# text = """Это пример многострочной строки.
+# Она может содержать несколько строк текста,
+# и все они будут сохранены в переменной."""
+# print(text)
+
+# def is_anagram(s1, s2):
+#     s1 = s1.replace(" "," ").lower()
+#     s2 = s2.replace(" "," ").lower()
+#     return sorted(s1) == sorted(s2)
+#
+# print(is_anagram("listen", "silent"))  # True
+# print(is_anagram("hello", "world"))  # False
+# import re
+# def is_palindrome(s):
+#     cleaned_string = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
+#     return cleaned_string == cleaned_string[::-1]
+# print(is_palindrome("A man, a plan, a canal: Panama")) # True
+# print(is_palindrome("racecar"))                         # True
+# print(is_palindrome("hello"))                         False
+
+# def longest_word(s):
+#     word = s.split()
+#     s_long = max(word, key = len)
+#     return s_long
+#
+# print(longest_word("In the middle of a vast desert, an extraordinary adventure awaits"))  # "extraordinary”
+
+# def format_phone_number(digits):
+#     format_number = f"({digits[:3]}) {digits[3:6]}-{digits[6:]}"
+#     return format_number
+# print(format_phone_number("1234567890"))  # "(123) 456-7890”
+
+# def remove_duplicates(s):
+#     result = []
+#     for char in s:
+#         if char not in result:
+#             result.append(char)
+#     return ''.join(result)
+#
+# print(remove_duplicates("programming"))  # "progamin”
+
+# numbers = [1, 2, 3]
+# numbers.append(5)
+# numbers.insert(3 , 4)
+# numbers.extend([8, 9])
+# numbers.remove(1)
+# removed = numbers.pop(0)
+# print(numbers)
+# numbers = [1, 2, 3,6,9,11,10]
+# total = sum(numbers)
+# print(total)
+
+# squares = [x * 2 for x in range(1, 6+1) if x % 2 == 0]
+# print(squares)  # Вывод: [1, 4, 9, 16, 25]
+
+# words = ["hello", "world", "python","lo"]
+# filtered_words = [word for word in words if len(word) >=3]
+# print(filtered_words)  # ['HELLO', 'WORLD', 'PYTHON']
+
+# numbers = [x*2 for x in range(10) if x % 2 == 0]
+# print(numbers)  # [0, 4, 16, 36, 64]
+
+# numbers = [-3, -2, -1, 0, 1, 2, 3]
+# result = [x if x >= 0 else 1 for x in numbers]
+# print(result)  # [0, 0, 0, 0, 1, 2, 3]
+
+# def remove_duplicates(lst):
+#     my_list = set(lst)
+#     return my_list
+# print(remove_duplicates([1, 2, 2, 3, 4, 4]))  # [1, 2, 3, 4]
+
+# def generate_squares(n):
+#     numbers =[x**2 for x in range(1,5+1)]
+#     return numbers
+# print(generate_squares(5))  # [1, 4, 9, 16, 25]
+
+# def merge_lists(list1, list2):
+#     merge_set = set(list1).union(set(list2))
+#     merge_lists = list(merge_set)
+#     return merge_lists
+#
+# print(merge_lists([1, 2, 3], [3, 4, 5]))  # [1, 2, 3, 4, 5]
+
+# def is_sorted(lst):
+#     return lst == sorted(lst)
+#
+# print(is_sorted([1, 2, 3, 4, 5]))  # True
+# print(is_sorted([1, 3, 2, 4, 5]))  # False
+
+# def merge_lists(list1, list2):
+#     lists = [x+y for x ,y in zip(list1,list2)]
+#     return lists
+# print(merge_lists([1, 2, 3], [4, 5, 6]))  # [5, 7, 9]
+
+# my_dict = {"a": 1, "b": 2, "c": 3}
+# for value in my_dict.values():
+#     print(value)
+
+# my_dict = {"a": 1, "b": 2}
+# del my_dict["b"]
+# print(my_dict.get("a"))  # Вывод: Not Available
+
+# my_dict = {"a": 1, "b": 2}
+# removed_value =  my_dict.pop("b")
+# print(removed_value)
+# print(my_dict)
+#
+# my_dict = {"a": 1, "b": 2}
+# my_dict.clear()
+# print(my_dict)
+
+# numbers = [1, 2, 3, 4, 5]
+# squares_dict = {x: x ** 2 for x in numbers if x % 2 == 0}
+# print(squares_dict)
+
+# words = ["apple", "banana", "cherry"]
+# length_dict = {word: len(word) for word in words}
+# print(length_dict)
+
+# dict1 = {"a": 1, "b": 2}
+# dict2 = {"b": 3, "c": 4}
+# dict1.update(dict2)
+# print(dict1)
+
+# def char_frequency(s):
+#     frequency = {}
+#     for char in s:
+#         if char in frequency:
+#             frequency[char] += 1
+#         else:
+#             frequency[char] = 1
+#     return frequency
+#
+# print(char_frequency("hello"))
+
+# def merge_dicts(dict1, dict2):
+#     dict1.update(dict2)
+#     return dict1
+# dict1 = {"a": 1, "b": 2}
+# dict2 = {"b": 3, "c": 4}
+# print(merge_dicts(dict1, dict2))  # {"a": 1, "b": 5, "c": 4}
+
+# def dict_to_lists(my_dict):
+#     list_keys = list(my_dict.keys())
+#     list_values = list(my_dict.values())
+#     return list_keys , list_values
+# my_dict = {"a": 1, "b": 2, "c": 3}
+# print(dict_to_lists(my_dict))  # (["a", "b", "c"], [1, 2, 3])
+
+# def group_by_first_letter(strings):
+#     groups = {}
+#     for s in strings:
+#         first_letter = s[0].lower()
+#         if first_letter in groups:
+#             groups[first_letter].append(s)
+#         else:
+#             groups[first_letter] = [s]
+#     return groups
+# strings = ["apple", "apricot", "banana", "blueberry", "cherry"]
+# print(group_by_first_letter(strings))
+#     # {"a": ["apple", "apricot"], "b": ["banana", "blueberry"], "c": ["cherry"]}
+
+# def extract_subdict(my_dict, keys):
+#     return {key:my_dict[key] for key in keys if key in my_dict}
+#
+# my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
+# keys = ["a", "c"]
+# print(extract_subdict(my_dict, keys))  # {"a": 1, "c": 3}
+
+# class Car:
+#     def __init__(self, brand, color):
+#         self.brand = brand
+#         self.color = color
+#
+#     def drive(self):  # Метод "ехать"
+#         print(f"{self.brand} is driving!")
+#
+#     def stop(self):  # Метод "остановиться"
+#         print(f"{self.brand} has stopped.")
+#
+# my_car = Car("Tesla", "red")
+# my_car.drive()  # Вывод: Tesla is driving!
+# my_car.stop()   # Вывод: Tesla has stopped.
+
+# class Car:
+#     def __init__(self, brand, model, speed=0):
+#         self.brand = brand # Марка автомобиля
+#         self.model = model  # Модель автомобиля
+#         self.speed = speed  # Текущая скорость
+#
+#
+#     def accelerate(self, increment):
+#         self.speed += increment
+#         print(f"{self.brand} {self.model} ускоряется. Текущая скорость: {self.speed} км/ч.")
+#
+#
+#     def brake(self, decrement):
+#         self.speed = max(0, self.speed - decrement)
+#         print(f"{self.brand} {self.model} замедляется. Текущая скорость: {self.speed} км/ч.")
+#
+#
+#     def display_info(self):
+#         print(f"Автомобиль: {self.brand} {self.model}, Скорость: {self.speed} км/ч")
+#
+# # Создание объектов класса Car:
+# car1 = Car("Toyota", "Corolla")
+# car1.accelerate(30)
+# car1.brake(10)
+# car1.display_info()
+
+
