@@ -1,6 +1,6 @@
-
-def greet(name):
-    print(f"Привет {name}!")
+#
+# def greet(name):
+#     print(f"Привет {name}!")
 
 #greet("Анна")
 #greet("Иван")
@@ -48,7 +48,7 @@ result = count_vowels(user_input)
 print(result)
 '''
 
-
+'''
 def print_diamond(rows):
     for i in range(rows):
         print("*" * (2 * i + 1))
@@ -57,12 +57,13 @@ def print_diamond(rows):
 
 #print_diamond(10)
 '''
-text = "Hello World!"
-print(text.lower())       # hello world!
-print(text.upper())       # HELLO WORLD!
-print(text.capitalize())  # Hello world!
-print(text.title())       # Hello World!
+# text = "Hello World!"
+# print(text.lower())       # hello world!
+# print(text.upper())       # HELLO WORLD!
+# print(text.capitalize())  # Hello world!
+# print(text.title())       # Hello World!
 '''
+
 
 def greet(name):
     """
@@ -70,7 +71,7 @@ def greet(name):
     и выводит приветственное сообщение.
     """
     print(f"Hello, {name}!")
-
+'''
 #help(greet)  # Выводит описание функции
 
 #numbers = [1, 2, 3, 2, 4]
@@ -161,7 +162,7 @@ print(my_dict)     # {'a': 1, 'c': 3}
 #
 # joined_text = " ".join(fruits)
 # print(joined_text) # "apple-banana-cherry"
-
+'''
 
 class Car:
     def __init__(self, brand, model, speed=0):
@@ -200,7 +201,7 @@ class ElectricCar(Car):
     def display_info(self):
 # Переопределение метода для вывода дополнительной информации
         print(f"Электромобиль: {self.brand} {self.model}, Скорость: {self.speed} км/ч, Заряд: {self.battery_level}%")
-
+'''
 # Создание объекта класса ElectricCar:
 # e_car = ElectricCar("Tesla", "Model 3", battery_level=50)
 # e_car.accelerate(40)
@@ -226,7 +227,7 @@ class ElectricCar(Car):
 # # Вне зависимости от типа автомобиля, вызываем метод start_engine:
 # for car in cars:
 #     car.start_engine()
-
+'''
 class Car:
     def __init__(self, brand, model, fuel_level=0):
         self.brand = brand
@@ -285,7 +286,7 @@ class Car:
     def from_string(cls, car_str):
         brand, model = car_str.split('-')
         return cls(brand, model)
-
+'''
 #
 # # Пример использования:
 # car1 = Car.from_string("Toyota-Corolla")
@@ -368,7 +369,7 @@ class Car:
 #             print(i)
 #
 # calculate(15)
-
+'''
 def text(str):
     string = str.split(",") # hello world!
     print(string)
@@ -379,7 +380,7 @@ def text(str):
 def text1 (str1):
     new_str = str1.replace("Hello", "Happy")
     print(new_str)
-
+'''
 # text1("Hello, World!")
 
 # text = "   "
@@ -849,7 +850,7 @@ print("Автомобили в автосалоне:")
 for car in lot:
     print(car)
 '''
-
+'''
 class Car:
     def __init__(self, brand, model, year):
         self.brand = brand
@@ -874,3 +875,40 @@ def car_factory(total):
 print("\nПроизводственная линия (генератор автомобилей):")
 for car in car_factory(10):
     print(car)
+    '''
+'''
+def  check_sign():
+    num = int(input("Ввведите число: "))
+    if num > 0 :
+        print("Число является положительным!")
+    elif num < 0:
+        print("Число является отрицательным!")
+    else:
+        print("Число является нулём!")
+
+#check_sign()
+
+def longest_common_prefix(strs):
+    if not strs:
+        return ""  # Если массив пуст, возвращаем пустую строку
+
+    # Находим длину самой короткой строки
+    min_length = min(len(s) for s in strs)
+
+    result = ""
+    for i in range(min_length):
+        current_char = strs[0][i]  # Берем символ из первой строки
+        for s in strs:
+            if s[i] != current_char:
+                return result  # Если символы не совпадают, возвращаем результат
+        result += current_char  # Добавляем символ к результату
+
+    return result
+
+# Пример использования
+# strs1 = ["flower", "flow", "flight"]
+# print(longest_common_prefix(strs1))  # Вывод: "fl"
+#
+# strs2 = ["dog", "racecar", "car"]
+# print(longest_common_prefix(strs2))  # Вывод: ""
+'''
