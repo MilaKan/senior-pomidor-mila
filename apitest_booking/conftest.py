@@ -8,7 +8,6 @@ from datetime import datetime, timedelta
 
 @pytest.fixture(scope = "session")
 def auth_session():
-    today = datetime.now().date()
     session = requests.session()
     session.headers.update(HEADERS)
 
