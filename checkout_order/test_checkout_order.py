@@ -1,7 +1,7 @@
-from checkout_order.checkout_page import CheckoutPage
+from checkout_order.pages.checkout_page import CheckoutPage
 from checkout_order.conftest import browser
-from checkout_order.inventory_page import InventoryPage
-from checkout_order.login_page import LoginPage
+from checkout_order.pages.inventory_page import InventoryPage
+from checkout_order.pages.login_page import LoginPage
 
 # def test_checkout_order1(page):
 #     print("Current URL:", page.url)  # Проверяем где находимся

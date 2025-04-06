@@ -32,13 +32,8 @@ def booking_data():
         "additionalneeds": fake.random_element(elements = ("Breakfast", "Dinner", "WiFi", "Parking","swimming pool"))
         }
     patch_data = {
-        "firstname": "UPDATED_" + fake.first_name(),
-        "lastname": "UPDATED_" + fake.last_name(),
-        "totalprice": fake.random_int(min=50000, max=200000),
-        "depositpaid": True,
-        "bookingdates": {
-            "checkout": "2024-04-10"
-        },
+        "firstname": fake.first_name(),
+        "lastname": fake.last_name(),
         "additionalneeds": fake.random_element(elements = ("Breakfast", "Dinner", "WiFi", "Parking","swimming pool"))
         }
     put_data = {

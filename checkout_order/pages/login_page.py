@@ -1,4 +1,4 @@
-from checkout_order.base_page import BasePage
+from checkout_order.pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
